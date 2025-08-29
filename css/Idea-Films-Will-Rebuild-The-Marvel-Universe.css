@@ -1,0 +1,19 @@
+p, blockquote, 
+h1, h2, h4, li, a {
+  font-family: arial;
+}
+
+img.x-men-logo,
+img.x-men-day-one {
+  height: 300px;
+  margin: auto;
+  display: block;
+}
+
+p {
+  text-indent: 2em;
+}
+
+p.caption, p.disclaimer {
+  font-style: italic;
+}
