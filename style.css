@@ -1,6 +1,23 @@
+h1, h2, a {
+  text-align: center; 
+  font-family: arial;   
+}
+
+a:link, a:visited {
+  color: black;  
+}
+
+a:hover {
+  color: red;
+}
+
 a {
-  font-family: arial;
   font-size: 20px;
   display: block;
-  margin: auto;
+  padding-bottom: 20px;
 }
+
+h2 {
+  padding-top: 20px;
+}
+
