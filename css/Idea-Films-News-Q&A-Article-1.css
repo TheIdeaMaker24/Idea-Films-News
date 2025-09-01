@@ -1,0 +1,26 @@
+body {
+  margin: 5em;
+}
+
+p, blockquote, 
+h1, h2, h4, li, a {
+  font-family: arial;
+}
+
+img.minifigure {
+  height: 300px;
+  margin: auto;
+  display: block;
+}
+
+p {
+  text-indent: 2em;
+}
+
+p.caption, p.disclaimer {
+  font-style: italic;
+}
+
+blockquote {
+  font-weight: 700;
+}
