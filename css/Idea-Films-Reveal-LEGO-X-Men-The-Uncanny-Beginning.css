@@ -7,6 +7,10 @@ h1, h2, h3, h4, li, a {
   font-family: arial;
 }
 
+h3 {
+  text-align: center;
+}
+
 img.x-men-logo, iframe {
   margin: auto;
   display: block;  
