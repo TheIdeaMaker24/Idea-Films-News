@@ -1,0 +1,22 @@
+body {
+  margin: 5em;
+}
+
+p, blockquote, 
+h1, h2, h4, li, a {
+  font-family: arial;
+}
+
+img.lego-gambit {
+  height: 200px;
+  margin: auto;
+  display: block;
+}
+
+p {
+  text-indent: 2em;
+}
+
+p.caption, p.disclaimer {
+  font-style: italic;
+}

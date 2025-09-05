@@ -1,0 +1,32 @@
+body {
+  margin: 5em;
+}
+
+p, blockquote, 
+h1, h2, h3, h4, li, a {
+  font-family: arial;
+}
+
+img.x-men-logo, iframe {
+  margin: auto;
+  display: block;  
+}
+
+img.x-men-logo {
+  height: 300px;
+
+}
+
+iframe {
+  width: 300px;
+  height: 175px;  
+  border-radius: 10px;  
+}
+
+p {
+  text-indent: 2em;
+}
+
+p.caption, p.disclaimer {
+  font-style: italic;
+}
