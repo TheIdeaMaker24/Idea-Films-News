@@ -1,0 +1,31 @@
+body {
+  margin: 5em;
+}
+
+p, blockquote, 
+h1, h2, h4, li, a {
+  font-family: arial;
+}
+
+img {
+  margin: auto;
+  display: block;  
+}
+
+img.marvel-logo {
+  height: 150px;
+}
+
+img.spider-man-vampire-hunt-logo-prototype {
+  height: 300px;
+  margin-top: -50px;
+  margin-bottom: -50px;
+}
+
+p {
+  text-indent: 2em;
+}
+
+p.caption, p.disclaimer {
+  font-style: italic;
+}
