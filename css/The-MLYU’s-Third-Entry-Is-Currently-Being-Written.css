@@ -7,12 +7,10 @@ h1, h2, h4, li, a {
   font-family: arial;
 }
 
-img.spider-man-vampire-hunt-logo-prototype {
+img.marvel-logo {
   margin: auto;
   display: block;    
-  height: 300px;
-  margin-top: -50px;
-  margin-bottom: -50px;
+  height: 150px;
 }
 
 p {
