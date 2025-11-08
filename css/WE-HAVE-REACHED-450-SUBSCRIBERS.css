@@ -1,0 +1,42 @@
+body {
+  margin: 5em;
+}
+
+p, blockquote, 
+h1, h2, h4, li, a {
+  font-family: arial;
+}
+
+img.youtube-logo, 
+img.x-men-logo,
+img.spider-man-vampire-hunt-logo-prototype,
+img.marvel-logo {
+  margin: auto;
+  display: block;  
+}
+
+img.youtube-logo{
+  height: 200px;
+}
+
+img.x-men-logo,
+img.spider-man-vampire-hunt-logo-prototype {
+  height: 300px;
+}
+
+img.spider-man-vampire-hunt-logo-prototype {  
+  margin-top: -50px;
+  margin-bottom: -50px;
+}
+
+img.marvel-logo {  
+  height: 150px;
+}
+
+p {
+  text-indent: 2em;
+}
+
+p.caption, p.disclaimer {
+  font-style: italic;
+}
