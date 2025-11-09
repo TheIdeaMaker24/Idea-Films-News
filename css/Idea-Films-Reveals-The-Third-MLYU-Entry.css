@@ -7,10 +7,19 @@ h1, h2, h4, li, a {
   font-family: arial;
 }
 
-img.youtube-logo {
-  height: 200px;
+img {
   margin: auto;
-  display: block;
+  display: block;  
+}
+
+img.marvel-logo {
+  height: 150px;
+}
+
+img.fantastic-four-logo {
+  height: 100px;
+  margin-top: 50px;
+  margin-bottom: 25px;
 }
 
 p {
