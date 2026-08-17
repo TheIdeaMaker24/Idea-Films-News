@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f8f9fa;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #202122;
+  line-height: 1.6;
+}
+
+.wiki-page {
+  width: min(1200px, 95%);
+  margin: 40px auto;
+  padding: 30px;
+
+  background: white;
+  border: 1px solid #a2a9b1;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 35px;
+}
+
+
+/* ARTICLE */
+
+.article h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.3rem;
+
+  border-bottom: 1px solid #a2a9b1;
+
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  color: #54595d;
+  font-size: 0.9rem;
+  margin-top: 0;
+}
+
+.article h2 {
+  font-family: Georgia, "Times New Roman", serif;
+
+  border-bottom: 1px solid #a2a9b1;
+
+  margin-top: 35px;
+  margin-bottom: 12px;
+}
+
+.article h3 {
+  margin-bottom: 5px;
+}
+
+
+/* LINKS */
+
+a {
+  color: #3366cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+/* TABLE OF CONTENTS */
+
+.toc {
+  display: inline-block;
+
+  background: #f8f9fa;
+  border: 1px solid #a2a9b1;
+
+  padding: 10px 20px;
+  margin: 20px 0;
+}
+
+.toc h3 {
+  text-align: center;
+  margin-top: 0;
+}
+
+.toc ol {
+  margin-bottom: 5px;
+}
+
+
+/* INFOBOX */
+
+.infobox {
+  background: #f8f9fa;
+
+  border: 1px solid #a2a9b1;
+
+  padding: 10px;
+
+  align-self: start;
+}
+
+.infobox h2 {
+  text-align: center;
+
+  background: #dfe8f6;
+
+  padding: 8px;
+
+  font-size: 1.2rem;
+
+  margin-top: 0;
+}
+
+.infobox img {
+  width: 100%;
+  display: block;
+
+  margin-bottom: 10px;
+}
+
+.infobox table {
+  width: 100%;
+  border-collapse: collapse;
+
+  font-size: 0.9rem;
+}
+
+.infobox th {
+  text-align: left;
+  vertical-align: top;
+
+  width: 40%;
+
+  padding: 5px;
+}
+
+.infobox td {
+  padding: 5px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+  .wiki-page {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .infobox {
+    order: -1;
+  }
+
+}

@@ -1,0 +1,309 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f8f9fa;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #202122;
+  line-height: 1.6;
+}
+
+.wiki-page {
+  width: min(1200px, 95%);
+  margin: 40px auto;
+  padding: 30px;
+
+  background: white;
+  border: 1px solid #a2a9b1;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 35px;
+}
+
+
+/* ARTICLE */
+
+.article h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.3rem;
+
+  border-bottom: 1px solid #a2a9b1;
+
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  color: #54595d;
+  font-size: 0.9rem;
+  margin-top: 0;
+}
+
+.article h2 {
+  font-family: Georgia, "Times New Roman", serif;
+
+  border-bottom: 1px solid #a2a9b1;
+
+  margin-top: 35px;
+  margin-bottom: 12px;
+}
+
+.article h3 {
+  margin-bottom: 5px;
+}
+
+
+/* LINKS */
+
+a {
+  color: #3366cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+/* TABLE OF CONTENTS */
+
+.toc {
+  display: inline-block;
+
+  background: #f8f9fa;
+  border: 1px solid #a2a9b1;
+
+  padding: 10px 20px;
+  margin: 20px 0;
+}
+
+.toc h3 {
+  text-align: center;
+  margin-top: 0;
+}
+
+.toc ol {
+  margin-bottom: 5px;
+}
+
+
+/* INFOBOX */
+
+.infobox {
+  background: #f8f9fa;
+
+  border: 1px solid #a2a9b1;
+
+  padding: 10px;
+
+  align-self: start;
+}
+
+.infobox h2 {
+  text-align: center;
+
+  background: #dfe8f6;
+
+  padding: 8px;
+
+  font-size: 1.2rem;
+
+  margin-top: 0;
+}
+
+.infobox img {
+  width: 100%;
+  display: block;
+
+  margin-bottom: 10px;
+}
+
+.infobox table {
+  width: 100%;
+  border-collapse: collapse;
+
+  font-size: 0.9rem;
+}
+
+.infobox th {
+  text-align: left;
+  vertical-align: top;
+
+  width: 40%;
+
+  padding: 5px;
+}
+
+.infobox td {
+  padding: 5px;
+}
+
+.release-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  font-size: 0.95rem;
+}
+
+.release-table th,
+.release-table td {
+  border: 1px solid #a2a9b1;
+  padding: 9px 10px;
+  vertical-align: middle;
+}
+
+.release-table th {
+  background: #eaecf0;
+  font-weight: bold;
+}
+.release-table td.title,
+.release-table td.date {
+  text-align: left;
+}
+
+.release-table td.director,
+.release-table td.screenwriter,
+.release-table td.producer,
+.release-table td.status {
+  text-align: center;
+  align-items: center;
+}
+
+.table-scroll {
+    width: 100%;
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+.cast-table {
+    width: 100%;
+    min-width: 1000px;
+
+    border-collapse: collapse;
+
+    font-size: 14px;
+}
+
+
+/* ALL CELLS */
+
+.cast-table th,
+.cast-table td {
+    border: 1px solid #a2a9b1;
+
+    padding: 8px 10px;
+
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+/* MOVIE HEADERS */
+
+.cast-table thead th {
+    background-color: #eaecf0;
+
+    font-weight: bold;
+}
+
+
+/* CHARACTER COLUMN */
+
+.cast-table tbody th {
+    background-color: #f8f9fa;
+
+    min-width: 170px;
+
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/* ACTOR APPEARS */
+
+.cast-table .appearance {
+    background-color: #ffffff;
+
+    min-width: 140px;
+}
+
+
+/* CHARACTER DOESN'T APPEAR */
+
+.cast-table .no-appearance {
+    background-color: #c8ccd1;
+}
+
+
+/* LINKS */
+
+.cast-table a {
+    color: #3366cc;
+    text-decoration: none;
+}
+
+.cast-table a:hover {
+    text-decoration: underline;
+}
+
+.cast-legend {
+    margin-top: 12px;
+    padding: 10px 12px;
+
+    border: 1px solid #a2a9b1;
+    background-color: #f8f9fa;
+
+    font-size: 13px;
+}
+
+.legend-items {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px 20px;
+
+    margin-top: 8px;
+}
+
+.legend-items > span {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+}
+
+.cast-icon {
+    display: inline-flex;
+
+    width: 22px;
+    height: 22px;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #72777d;
+    border-radius: 50%;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    background: white;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+  .wiki-page {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .infobox {
+    order: -1;
+  }
+
+}
