@@ -146,6 +146,7 @@ a:hover {
   border-collapse: collapse;
   margin-top: 15px;
   font-size: 0.95rem;
+  min-width: 300px;
 }
 
 .release-table th,
@@ -175,7 +176,8 @@ a:hover {
 .table-scroll {
     width: 100%;
     overflow-x: auto;
-    margin: 20px 0;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 6px;
 }
 
 .cast-table {
@@ -185,6 +187,29 @@ a:hover {
     border-collapse: collapse;
 
     font-size: 14px;
+}
+
+/* Keep character names visible while scrolling */
+
+.cast-table tbody th {
+    position: sticky;
+    left: 0;
+
+    z-index: 2;
+
+    background-color: #f8f9fa;
+}
+
+
+/* Keep Character header visible too */
+
+.cast-table thead th:first-child {
+    position: sticky;
+    left: 0;
+
+    z-index: 3;
+
+    background-color: #eaecf0;
 }
 
 
@@ -293,17 +318,630 @@ a:hover {
     background: white;
 }
 
-/* MOBILE */
+/* =========================
+   INFOBOX RESPONSIVE FIX
+   ========================= */
 
-@media (max-width: 800px) {
+.infobox {
+    width: 100%;
+    max-width: 320px;
+    min-width: 0;
 
-  .wiki-page {
-    grid-template-columns: 1fr;
-    padding: 20px;
-  }
+    box-sizing: border-box;
+}
 
-  .infobox {
-    order: -1;
-  }
+.infobox table {
+    width: 100%;
+    table-layout: auto;
+}
+
+.infobox th,
+.infobox td {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* =========================================================
+   IDEA FILMS RESPONSIVE DESIGN
+   Breakpoints:
+   300px
+   500px
+   800px
+   1000px
+   1200px
+  1400px
+   ========================================================= */
+
+/* =========================================================
+   300px AND BELOW
+   Very small phones / narrow viewport
+   ========================================================= */
+
+@media screen and (max-width: 300px) {
+
+    body {
+        font-size: 13px;
+    }
+
+    .wiki-page {
+        padding: 8px;
+    }
+
+
+    /* Headings */
+
+    .article h1 {
+        font-size: 1.45rem;
+    }
+
+    .article h2 {
+        font-size: 1.2rem;
+    }
+
+    .article h3 {
+        font-size: 1rem;
+    }
+
+
+    /* Infobox */
+
+    .infobox {
+        padding: 6px;
+    }
+
+    .infobox h2 {
+        font-size: 1rem;
+    }
+
+    .infobox table {
+        font-size: 11px;
+    }
+
+    .infobox th,
+    .infobox td {
+        padding: 4px;
+        font-size: 10px;
+    }
+
+    .infobox th {
+        width: 40%;
+    }
+
+    .infobox td {
+        width: 60%;
+    }
+
+
+    /* Contents */
+
+    .toc {
+        font-size: 12px;
+
+        padding: 8px 12px;
+    }
+
+
+    /* Tables */
+
+    .cast-table {
+        min-width: 750px;
+        font-size: 10px;
+    }
+
+    .release-table {
+        min-width: 600px;
+        font-size: 10px;
+    }
+
+    .cast-table th,
+    .cast-table td,
+    .release-table th,
+    .release-table td {
+        padding: 5px;
+    }
+
+
+    /* Legend */
+
+    .cast-legend {
+        padding: 7px;
+
+        font-size: 10px;
+    }
+
+    .cast-icon {
+        width: 18px;
+        height: 18px;
+
+        font-size: 8px;
+    }
+
+}
+
+/* =========================================================
+   500px AND BELOW
+   Standard phones
+   ========================================================= */
+
+@media screen and (max-width: 500px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    .wiki-page {
+        padding: 12px;
+    }
+
+    .mobile-infobox {
+        width: 100%;
+        max-width: 100%;
+
+        margin: 18px 0;
+        padding: 10px;
+    }
+
+    .mobile-infobox h2 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .mobile-infobox img {
+        display: block;
+
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+
+        margin: 10px auto;
+    }
+
+    .mobile-infobox table {
+        width: 100%;
+        table-layout: auto;
+    }
+
+    .mobile-infobox th,
+    .mobile-infobox td {
+        padding: 7px;
+
+        font-size: 12px;
+
+        vertical-align: top;
+    }
+
+    .mobile-infobox th {
+        width: 35%;
+    }
+
+    .mobile-infobox td {
+        width: 65%;
+    }
+
+    /* Headings */
+
+    .article h1 {
+        font-size: 1.7rem;
+    }
+
+    .article h2 {
+        font-size: 1.3rem;
+    }
+
+    .article h3 {
+        font-size: 1.05rem;
+    }
+
+
+    /* Infobox */
+
+    .infobox {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+      padding: 8px;
+    }
+
+    .infobox h2 {
+        font-size: 1.1rem;
+    }
+
+    .infobox table {
+        font-size: 12px;
+        width: 100%;
+        table-layout: fixed;        
+    }
+
+    .infobox th,
+    .infobox td {
+        padding: 5px;
+
+        font-size: 12px;
+
+        vertical-align: top;
+    }
+
+    .infobox th {
+        width: 38%;
+    }
+
+    .infobox td {
+        width: 62%;
+    }
+
+
+    /* Contents */
+
+    .toc {
+        font-size: 13px;
+
+        padding: 10px 15px;
+    }
+
+
+    /* Tables */
+
+    .cast-table {
+        min-width: 800px;
+        font-size: 11px;
+    }
+
+    .release-table {
+        min-width: 650px;
+        font-size: 11px;
+    }
+
+    .cast-table th,
+    .cast-table td,
+    .release-table th,
+    .release-table td {
+        padding: 6px;
+    }
+
+
+    /* Legend becomes one column */
+
+    .cast-legend {
+        font-size: 11px;
+    }
+
+    .legend-items {
+        grid-template-columns: 1fr;
+
+        gap: 7px;
+    }
+
+
+    /* Smaller legend icons */
+
+    .cast-icon {
+        width: 19px;
+        height: 19px;
+
+        font-size: 9px;
+    }
+
+
+    /* Horizontal scroll message */
+
+    .table-scroll::after {
+        content: "← Swipe to view more →";
+
+        display: block;
+
+        margin-top: 6px;
+
+        text-align: center;
+
+        font-size: 10px;
+        color: #72777d;
+    }
+
+}
+
+/* =========================================================
+   800px AND BELOW
+   Tablet / large phone
+   ========================================================= */
+
+@media screen and (max-width: 800px) {
+
+    body {
+        font-size: 15px;
+    }
+
+    /* Switch entire wiki layout to ONE column */
+
+    .wiki-page {
+        width: 100%;
+        margin: 0;
+
+        padding: 16px;
+
+        display: block;
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+        border-left: none;
+        border-right: none;
+    }
+
+    .article {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .mobile-infobox {
+        display: block;
+
+        width: 100%;
+        max-width: 550px;
+
+        margin: 20px auto;
+
+        float: none;
+        position: static;
+
+        box-sizing: border-box;
+    }
+
+    .mobile-infobox table {
+        width: 100%;
+        table-layout: auto;
+    }
+
+    .mobile-infobox th {
+        width: 35%;
+
+        text-align: left;
+
+        white-space: normal;
+        word-break: normal;
+        overflow-wrap: normal;
+    }
+
+    .mobile-infobox td {
+        width: 65%;
+
+        word-break: normal;
+        overflow-wrap: break-word;
+    }
+
+    /* Put infobox above article */
+
+    .infobox {
+        order: -1;
+
+        width: 100%;
+        max-width: 550px;
+
+        margin: 0 auto;
+
+        padding: 10px;
+    }
+
+    .infobox table {
+        width: 100%;
+    }
+
+    .infobox th {
+        width: 35%;
+    }
+
+    .infobox td {
+        width: 65%;
+    }
+
+
+
+    /* Headings */
+
+    .article h1 {
+        font-size: 1.9rem;
+    }
+
+    .article h2 {
+        font-size: 1.4rem;
+    }
+
+    .article h3 {
+        font-size: 1.15rem;
+    }
+
+
+    /* Contents */
+
+    .toc {
+        display: block;
+
+        width: 100%;
+
+        padding: 12px 18px;
+    }
+
+
+    /* Tables */
+
+    .table-scroll {
+        width: 100%;
+
+        overflow-x: auto;
+
+        -webkit-overflow-scrolling: touch;
+
+        padding-bottom: 6px;
+    }
+
+    .cast-table {
+        min-width: 850px;
+        font-size: 12px;
+    }
+
+    .release-table {
+        min-width: 700px;
+        font-size: 12px;
+    }
+
+
+    /* Character column */
+
+    .cast-table tbody th {
+        min-width: 150px;
+    }
+
+
+    /* Actor cells */
+
+    .cast-table .appearance {
+        min-width: 115px;
+    }
+
+
+    /* Legend */
+
+    .legend-items {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        gap: 8px 15px;
+    }
+
+}
+
+/* =========================================================
+   1000px AND BELOW
+   Tablet landscape / small laptop
+   ========================================================= */
+
+@media screen and (max-width: 1000px) {
+
+    .wiki-page {
+        width: 97%;
+
+        grid-template-columns: minmax(0, 1fr) 250px;
+        gap: 20px;
+
+        padding: 20px;
+    }
+
+    .article h1 {
+        font-size: 2rem;
+    }
+
+
+    /* Infobox */
+
+    .infobox {
+        font-size: 13px;
+    }
+
+    .infobox table {
+        font-size: 13px;
+    }
+
+
+    /* Tables */
+
+    .cast-table {
+        min-width: 900px;
+        font-size: 13px;
+    }
+
+    .release-table {
+        min-width: 700px;
+        font-size: 13px;
+    }
+
+    .cast-table th,
+    .cast-table td,
+    .release-table th,
+    .release-table td {
+        padding: 7px;
+    }
+
+
+    /* Legend */
+
+    .legend-items {
+        gap: 8px 15px;
+    }
+
+}
+
+/* =========================================================
+   1200px AND BELOW
+   Smaller desktop / laptop
+   ========================================================= */
+
+@media screen and (max-width: 1200px) {
+
+    .wiki-page {
+        width: 96%;
+
+        grid-template-columns: minmax(0, 1fr) 280px;
+        gap: 25px;
+
+        padding: 24px;
+    }
+
+    .infobox {
+        width: 100%;
+    }
+
+    .article h1 {
+        font-size: 2.1rem;
+    }
+
+    .article h2 {
+        font-size: 1.5rem;
+    }
+
+
+    /* Large tables become horizontally scrollable */
+
+    .table-scroll {
+        width: 100%;
+        overflow-x: auto;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .cast-table {
+        min-width: 950px;
+    }
+
+    .release-table {
+        min-width: 750px;
+    }
+
+}
+
+/* =========================================================
+   1400px AND BELOW
+   Large desktop / laptop
+   ========================================================= */
+
+@media screen and (max-width: 1400px) {
+
+    .wiki-page {
+        width: 95%;
+        max-width: 1250px;
+
+        grid-template-columns: minmax(0, 1fr) 300px;
+        gap: 30px;
+
+        padding: 28px;
+    }
+
+    .article h1 {
+        font-size: 2.2rem;
+    }
+
+    .release-table,
+    .cast-table {
+        font-size: 14px;
+    }
 
 }
