@@ -234,6 +234,12 @@ a:hover {
     font-weight: bold;
 }
 
+/* Header to separate characters introduced in specific movies/shows */
+
+.cast-table tbody tr th.movie-introduction-header {
+    background-color: rgb(206, 193, 248);
+}
+
 
 /* CHARACTER COLUMN */
 
